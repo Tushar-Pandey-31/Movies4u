@@ -1,0 +1,226 @@
+/* Global styles */
+
+/* Global styles */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  }
+  
+  /* Header styles */
+  
+  .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #222;
+  color: #fff;
+  padding: 1rem;
+  }
+  
+  .logo {
+  font-size: 1.5rem;
+  }
+  
+  .nav ul {
+  list-style: none;
+  display: flex;
+  }
+  
+  .nav li:not(:last-child) {
+  margin-right: 1rem;
+  }
+  
+  .nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  }
+  
+  .nav a:hover {
+  text-decoration: underline;
+  }
+  
+  /* Main styles */
+  
+  .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+  }
+  
+  .search-section {
+  width: 100%;
+  max-width: 500px;
+  }
+  
+  .search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  }
+  
+  .search-label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  }
+  
+  .search-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  }
+  
+  .search-btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  }
+  
+  .search-btn:hover {
+  background-color: #444;
+  }
+  
+  /* Footer styles */
+  
+  .footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  }
+  
+  .results-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  }
+  
+  .movie-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  }
+  
+  .movie-poster {
+  height: 300px;
+  overflow: hidden;
+  }
+  
+  .movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+  }
+  
+  .movie-poster img:hover {
+  transform: scale(1.1);
+  }
+  
+  .card-content {
+  flex-grow: 1;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  }
+  
+  .movie-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  }
+  
+  .movie-year {
+  font-size: 0.8rem;
+  margin: 5px 0;
+}
+
+.details-btn {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #0074d9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.details-btn:hover {
+  background-color: #0e5a8a;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+
+  .nav {
+    margin-top: 1rem;
+  }
+
+  .main {
+    height: auto;
+  }
+
+  .search-section {
+    margin-top: 2rem;
+  }
+
+  .search-form {
+    width: 90%;
+  }
+
+  .movie-card {
+    height: auto;
+  }
+}
+
+/* On screens that are 600px or less, make the movie posters smaller */
+@media only screen and (max-width: 600px) {
+  .movie-poster {
+    height: 200px;
+  }
+}
+
+/* On screens that are 400px or less, make the font sizes smaller */
+@media only screen and (max-width: 400px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .movie-title {
+    font-size: 1rem;
+  }
+}
